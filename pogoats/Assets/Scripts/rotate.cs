@@ -13,6 +13,6 @@ public class rotate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float rotationX = Input.GetAxis("Mouse X") * rotationSpeed * Mathf.Deg2Rad;
-		transform.RotateAround(Vector3.up, -rotationX);
+		transform.RotateAround(Vector3.up, rotationX);
 	}
 }
