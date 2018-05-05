@@ -7,6 +7,7 @@ public class rotate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rotationSpeed = 5;
+		Debug.Log ("hi");
 	}
 	
 	// Update is called once per frame
