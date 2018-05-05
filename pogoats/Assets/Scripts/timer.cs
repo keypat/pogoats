@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
 	public Text timerText;
-	private float time = 120;
+	private float time = 0;
 	 
 	void Start ()
 	{
@@ -18,7 +18,7 @@ public class timer : MonoBehaviour {
 		if (timerText != null)
 		{
 			Debug.Log("asdasd");
-			time = 120;
+			time = 0;
 			timerText.text = "Time Left: 20:00:000";
 			InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
 		}
@@ -28,7 +28,7 @@ public class timer : MonoBehaviour {
 	{
 		if (timerText != null)
 		{
-			time -= Time.deltaTime;
+			time += Time.deltaTime;
 			string minutes = Mathf.Floor(time / 60).ToString("00");
 			string seconds = (time % 60).ToString("00");
 			string fraction = ((time * 100) % 100).ToString("000");

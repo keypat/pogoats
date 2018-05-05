@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour {
 
@@ -10,15 +11,27 @@ public class player : MonoBehaviour {
 	public float maxJumpForce;
 
     private bool onGround;
-    private float jumpPressure;
+    public float jumpPressure;
     private Rigidbody rbody;
-
+	
+	public Slider powerBar;
+	
+	public KeyCode right;
+	public float rotationSpeed;
+	public KeyCode left;
+	public KeyCode jump;
+	public float airSpeed;
+	
+	
 	// Use this for initialization
 	void Start () {
         onGround = true;
         jumpPressure = 0f;
         maxJumpForce = 10f;
+		rotationSpeed = 50;
         rbody = GetComponent<Rigidbody>();
+		//powerBar.minValue = minJump;
+		//powerBar.maxValue = maxJumpForce+minJump;
 
 	}
 	
@@ -26,11 +39,17 @@ public class player : MonoBehaviour {
 	void Update () {
 
 		//transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime, 0f , moveSpeed*Input.GetAxis("Vertical")*Time.deltaTime);
-
+        
+		
+		
         if (onGround)
         {
+			if (Input.GetKey(left))
+				transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime);
+			if (Input.GetKey(right))
+				transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
             //holding the jump button
-            if (Input.GetButton("Jump"))
+            if (Input.GetKey(jump))
             {
                 if (jumpPressure < maxJumpForce)
                 {
@@ -39,7 +58,7 @@ public class player : MonoBehaviour {
                 else
                 {
                     jumpPressure = maxJumpForce;
-                }               
+                }     
             }
             //not holding jump button
             else
@@ -49,13 +68,25 @@ public class player : MonoBehaviour {
                 {
                     jumpPressure = jumpPressure + minJump;
 					Vector3 vertJumpVector = new Vector3(0f, jumpPressure, 0f);
-					Vector3 horizJumpVector = transform.forward * (jumpPressure/2);
+					Vector3 horizJumpVector = transform.forward * (jumpPressure/2f);
 					rbody.AddForce(vertJumpVector + horizJumpVector, ForceMode.Impulse);
                     jumpPressure = 0f;
                     onGround = false;
                 }
             }
-        }		
+        } else { 
+			if (Input.GetKey(left)) {
+				transform.Rotate(-Vector3.up * rotationSpeed * 1.4f * Time.deltaTime);
+				rbody.AddForce(-transform.right*(airSpeed),ForceMode.Force);
+			}
+			if (Input.GetKey(right)) {
+				transform.Rotate(Vector3.up * rotationSpeed * 1.4f * Time.deltaTime);
+				rbody.AddForce(transform.right*(airSpeed),ForceMode.Force);
+			}
+		
+			//rbody.AddForce(transform.forward*airSpeed, ForceMode.Force);
+		}	
+		powerBar.value = jumpPressure;		
 	}
 
     private void OnCollisionEnter(Collision other)
