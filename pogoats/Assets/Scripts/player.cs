@@ -28,7 +28,7 @@ public class player : MonoBehaviour {
         onGround = true;
         jumpPressure = 0f;
         maxJumpForce = 10f;
-		rotationSpeed = 50;
+		//rotationSpeed = 50;
         rbody = GetComponent<Rigidbody>();
 		//powerBar.minValue = minJump;
 		//powerBar.maxValue = maxJumpForce+minJump;

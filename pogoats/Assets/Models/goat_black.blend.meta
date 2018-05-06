@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: b851e0fb24ee04c6db238fc7ef70246e
+timeCreated: 1525575281
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Back_Lower_Leg_L
+    100004: Back_Lower_Leg_L_001
+    100006: Back_Upper_Leg_L
+    100008: Back_Upper_Leg_R
+    100010: Body
+    100012: Ear_L
+    100014: Ear_R
+    100016: Front_Lower_Leg_L
+    100018: Front_Lower_Leg_R
+    100020: Front_Upper_Leg_L
+    100022: Front_Upper_Leg_R
+    100024: //RootNode
+    100026: Goat_Mesh
+    100028: Head
+    100030: Lower_Jaw
+    100032: Neck
+    100034: Root
+    100036: Tail
+    100038: Upper_Jaw
+    400000: Armature
+    400002: Back_Lower_Leg_L
+    400004: Back_Lower_Leg_L_001
+    400006: Back_Upper_Leg_L
+    400008: Back_Upper_Leg_R
+    400010: Body
+    400012: Ear_L
+    400014: Ear_R
+    400016: Front_Lower_Leg_L
+    400018: Front_Lower_Leg_R
+    400020: Front_Upper_Leg_L
+    400022: Front_Upper_Leg_R
+    400024: //RootNode
+    400026: Goat_Mesh
+    400028: Head
+    400030: Lower_Jaw
+    400032: Neck
+    400034: Root
+    400036: Tail
+    400038: Upper_Jaw
+    2100000: Body_Material
+    2100002: Hoof_Material
+    2100004: Horn_Material
+    2100006: Eye_Material
+    4300000: Goat_Mesh
+    7400000: Default Take
+    7400002: Goat_Idle
+    7400004: Goat_In_Air
+    7400006: Goat_Jump
+    9500000: //RootNode
+    13700000: Goat_Mesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
