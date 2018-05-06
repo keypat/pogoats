@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 54850177163379324}
   - component: {fileID: 114376639377281980}
   - component: {fileID: 136893324056231276}
+  - component: {fileID: 114760318612451546}
   m_Layer: 5
   m_Name: Pogoat_Grey(P1)
   m_TagString: Player
@@ -1103,7 +1104,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499562553637172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b575c1252a265b4fa767bb4849054b6, type: 3}
   m_Name: 
@@ -1452,6 +1453,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114760318612451546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052734098150386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b575c1252a265b4fa767bb4849054b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 114247771141032662}
+  keepTiming: 0
 --- !u!136 &136893324056231276
 CapsuleCollider:
   m_ObjectHideFlags: 1

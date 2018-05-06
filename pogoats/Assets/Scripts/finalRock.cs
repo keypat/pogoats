@@ -25,6 +25,7 @@ public class finalRock : MonoBehaviour {
             winScreen.SetActive(true);
             p2MoveScript.enabled = false;
             timerScript.keepTiming = false;
+			//timerScript.enabled = false;
             //winTag.text = "Player 1 wins @ " + timer.text;
         }
             
@@ -32,8 +33,8 @@ public class finalRock : MonoBehaviour {
         {
             winScreen2.SetActive(true);
             p1MoveScript.enabled = false;
-            timer2.enabled = false;
             timerScript2.keepTiming = false;
+			//timer2.enabled = false;
             //winTag.text = "Player 2 wins @ " + timer2.text;
         }
        // Scene
