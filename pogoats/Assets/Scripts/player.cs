@@ -22,6 +22,9 @@ public class player : MonoBehaviour {
 	public KeyCode jump;
 	public float airSpeed;
 	
+	public AudioSource jumpSound;
+	public AudioSource collideSound;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -40,7 +43,8 @@ public class player : MonoBehaviour {
 
 		//transform.Translate(moveSpeed*Input.GetAxis("Horizontal")*Time.deltaTime, 0f , moveSpeed*Input.GetAxis("Vertical")*Time.deltaTime);
         
-		
+		if (Input.GetKeyUp(jump))
+			jumpSound.Play();
 		
         if (onGround)
         {
@@ -90,7 +94,10 @@ public class player : MonoBehaviour {
 	}
 
     private void OnCollisionEnter(Collision other)
-    {
+    {	
+		if (other.gameObject.CompareTag("Player"))
+			collideSound.Play();
+		
         if (other.gameObject.CompareTag("ground"))
         {
             onGround = true;
