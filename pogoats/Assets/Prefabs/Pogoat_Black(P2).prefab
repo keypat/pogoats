@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 54184148096177654}
   - component: {fileID: 114080398091014034}
   - component: {fileID: 136175778097671490}
+  - component: {fileID: 114206529460532200}
   m_Layer: 5
   m_Name: Pogoat_Black(P2)
   m_TagString: Player
@@ -1099,6 +1100,7 @@ MonoBehaviour:
   airSpeed: 5
   jumpSound: {fileID: 0}
   collideSound: {fileID: 0}
+  mostRecentGroundPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114146980501546500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1126,6 +1128,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114206529460532200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579922334232268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b575c1252a265b4fa767bb4849054b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 114266474665538670}
+  keepTiming: 0
 --- !u!114 &114236177214732892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1408,7 +1423,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722341749327300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b575c1252a265b4fa767bb4849054b6, type: 3}
   m_Name: 

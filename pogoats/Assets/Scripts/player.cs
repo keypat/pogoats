@@ -24,6 +24,8 @@ public class player : MonoBehaviour {
 	
 	public AudioSource jumpSound;
 	public AudioSource collideSound;
+
+	public Vector3 mostRecentGroundPosition;
 	
 	
 	// Use this for initialization
@@ -35,6 +37,7 @@ public class player : MonoBehaviour {
         rbody = GetComponent<Rigidbody>();
 		//powerBar.minValue = minJump;
 		//powerBar.maxValue = maxJumpForce+minJump;
+		mostRecentGroundPosition = transform.position;
 
 	}
 	
@@ -101,6 +104,7 @@ public class player : MonoBehaviour {
         if (other.gameObject.CompareTag("ground"))
         {
             onGround = true;
+			mostRecentGroundPosition = transform.position;
         }
     }
 }

@@ -223,31 +223,26 @@ Prefab:
     - target: {fileID: 224506595950041482, guid: 1943a75e65023451e9406610b3210a99,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224506595950041482, guid: 1943a75e65023451e9406610b3210a99,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.071428575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224374650308761006, guid: 1943a75e65023451e9406610b3210a99,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.071428575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224374650308761006, guid: 1943a75e65023451e9406610b3210a99,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224374650308761006, guid: 1943a75e65023451e9406610b3210a99,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.071428575
-      objectReference: {fileID: 0}
-    - target: {fileID: 114760152218458806, guid: 1943a75e65023451e9406610b3210a99,
-        type: 2}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -455,9 +450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22494ecb71f4542d6a9619039afba5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLocation: {fileID: 1739780963}
   player1: {fileID: 227053694}
   player2: {fileID: 476961506}
+  player1Script: {fileID: 227053696}
+  player2Script: {fileID: 476961508}
 --- !u!65 &282630351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -765,19 +761,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 16639336}
   m_Script: {fileID: 11500000, guid: 692719ed14460408caa0f541f0fe2914, type: 3}
---- !u!114 &476961511
+--- !u!114 &476961511 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 476961506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabParentObject: {fileID: 114206529460532200, guid: 1943a75e65023451e9406610b3210a99,
+    type: 2}
+  m_PrefabInternal: {fileID: 16639336}
   m_Script: {fileID: 11500000, guid: 4b575c1252a265b4fa767bb4849054b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 295367530}
-  keepTiming: 0
 --- !u!1 &500691369 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1567502679273592, guid: 1943a75e65023451e9406610b3210a99,
@@ -2341,27 +2330,27 @@ Prefab:
     - target: {fileID: 224755943117853286, guid: a74174fc627d0443088cea7ce2b4bc1d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224755943117853286, guid: a74174fc627d0443088cea7ce2b4bc1d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.071428575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224206207331671540, guid: a74174fc627d0443088cea7ce2b4bc1d,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.071428575
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224206207331671540, guid: a74174fc627d0443088cea7ce2b4bc1d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224206207331671540, guid: a74174fc627d0443088cea7ce2b4bc1d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.071428575
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a74174fc627d0443088cea7ce2b4bc1d, type: 2}

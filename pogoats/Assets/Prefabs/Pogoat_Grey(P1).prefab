@@ -1296,6 +1296,7 @@ MonoBehaviour:
   airSpeed: 5
   jumpSound: {fileID: 0}
   collideSound: {fileID: 0}
+  mostRecentGroundPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114421673157437552
 MonoBehaviour:
   m_ObjectHideFlags: 1
