@@ -15,11 +15,16 @@ public class finalRock : MonoBehaviour {
     public GameObject winScreen;
     public GameObject winScreen2;
 
+	public GameObject loseScreen;
+	public GameObject loseScreen2;
+
     public player p1MoveScript;
     public player p2MoveScript;
 
 	public Rigidbody p1RigBod;
 	public Rigidbody p2RigBod;
+
+
 
 
 	void Start()
@@ -30,10 +35,16 @@ public class finalRock : MonoBehaviour {
 
 	void OnCollisionEnter(Collision other)
 	{
-		if (other.gameObject == player1)
-			winScreen.SetActive(true);
-		else
-			winScreen2.SetActive(true);
+		if (other.gameObject == player1) 
+		{
+			winScreen.SetActive (true);
+			loseScreen2.SetActive (true);
+		} 
+		else 
+		{
+			winScreen2.SetActive (true);
+			loseScreen.SetActive (true);
+		}
 		
 		p1RigBod.constraints = RigidbodyConstraints.FreezeAll;
 		p2RigBod.constraints = RigidbodyConstraints.FreezeAll;
