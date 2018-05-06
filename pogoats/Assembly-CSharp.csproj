@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\finalRock.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\quit.cs" />
      <Compile Include="Assets\Scripts\respawn.cs" />

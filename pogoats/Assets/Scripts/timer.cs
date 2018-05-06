@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour {
 	public Text timerText;
 	private float time = 0;
+
+	public bool keepTiming;
 	 
 	void Start ()
 	{
 		Debug.Log("hi");
 		StartCoundownTimer();
+		keepTiming = true;
 	}
 	 
 	void StartCoundownTimer()
@@ -26,7 +29,7 @@ public class timer : MonoBehaviour {
 	 
 	void UpdateTimer()
 	{
-		if (timerText != null)
+		if (timerText != null && keepTiming)
 		{
 			time += Time.deltaTime;
 			string minutes = Mathf.Floor(time / 60).ToString("00");
