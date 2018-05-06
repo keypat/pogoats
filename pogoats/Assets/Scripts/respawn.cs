@@ -11,9 +11,9 @@ public class respawn : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject == player1)
+		if (other.gameObject == player1) 
 			player1.transform.position = respawnLocation;
-		if(other.gameObject == player2)
+		if (other.gameObject == player2) 
 			player2.transform.position = respawnLocation;
 	}
 
