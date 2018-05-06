@@ -18,25 +18,28 @@ public class finalRock : MonoBehaviour {
     public player p1MoveScript;
     public player p2MoveScript;
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject == player1)
-        {
-            winScreen.SetActive(true);
-            p2MoveScript.enabled = false;
-            timerScript.keepTiming = false;
-			//timerScript.enabled = false;
-            //winTag.text = "Player 1 wins @ " + timer.text;
-        }
-            
-        if (other.gameObject == player2)
-        {
-            winScreen2.SetActive(true);
-            p1MoveScript.enabled = false;
-            timerScript2.keepTiming = false;
-			//timer2.enabled = false;
-            //winTag.text = "Player 2 wins @ " + timer2.text;
-        }
-       // Scene
-    }
+	public Rigidbody p1RigBod;
+	public Rigidbody p2RigBod;
+
+
+	void Start()
+	{
+		timerScript = player1.GetComponent<timer>();
+		timerScript2 = player2.GetComponent<timer>();
+	}
+
+	void OnCollisionEnter(Collision other)
+	{
+		if (other.gameObject == player1)
+			winScreen.SetActive(true);
+		else
+			winScreen2.SetActive(true);
+		
+		p1RigBod.constraints = RigidbodyConstraints.FreezeAll;
+		p2RigBod.constraints = RigidbodyConstraints.FreezeAll;
+		p1MoveScript.enabled = false;
+		p2MoveScript.enabled = false;
+		timerScript.keepTiming = false;
+		timerScript2.keepTiming = false;
+	}
 }
