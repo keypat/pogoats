@@ -7,15 +7,14 @@ public class respawn : MonoBehaviour {
 	public GameObject player1;
 	public GameObject player2;
 
-	public player player1Script;
-	public player player2Script;
+	public Vector3 respawnLocation;
 
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject == player1)
-			player1.transform.position = player1Script.mostRecentGroundPosition;
+			player1.transform.position = respawnLocation;
 		if(other.gameObject == player2)
-			player2.transform.position = player2Script.mostRecentGroundPosition;
+			player2.transform.position = respawnLocation;
 	}
 
 }
