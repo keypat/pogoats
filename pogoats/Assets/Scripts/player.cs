@@ -60,7 +60,7 @@ public class player : MonoBehaviour {
             {
                 if (jumpPressure < maxJumpForce)
                 {
-                    jumpPressure += Time.deltaTime * 10f;
+                    jumpPressure += Time.deltaTime * 20f;
                 }
                 else
                 {
