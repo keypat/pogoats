@@ -11,7 +11,6 @@ public class timer : MonoBehaviour {
 	 
 	void Start ()
 	{
-		Debug.Log("hi");
 		StartCoundownTimer();
 		keepTiming = true;
 	}
@@ -20,7 +19,6 @@ public class timer : MonoBehaviour {
 	{
 		if (timerText != null)
 		{
-			Debug.Log("asdasd");
 			time = 0;
 			timerText.text = "Time Left: 20:00:000";
 			InvokeRepeating("UpdateTimer", 0.0f, 0.01667f);
